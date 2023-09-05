@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arte Francesco Moretta</title>
+    <style>
+        body {
+            background: linear-gradient(45deg, #FFA500, #FFD700);
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: flex-end;
+            overflow-x: hidden;
+        }
+
+        .main-page {
+            padding: 25px;
+            background-color: white;
+            border-radius: 16px;
+            height: 99%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .button {
+            padding: 12px 24px;
+            background-color: aqua;
+            border-radius: 15px;
+            color: white;
+            margin-top: 20px;
+            position: relative;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            font-size: 12px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .immagini {
+            display: none;
+            justify-content: center;
+            margin-top: 20px;
+            width: 75%; /* Larghezza dell'area delle immagini */
+            text-align: center;
+        }
+
+        .immagini img {
+            max-width: 50%;
+            max-height: 50%;
+            border-radius: 8px;
+            margin: 10px;
+        }
+
+        .testo-emotion {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-page">
+        <h1>Le mie immagini</h1>
+        <button class="button" onclick="mostraImmagini()">Guarda le immagini</button>
+    </div>
+
+    <div class="immagini">
+        <!-- Inserisci qui le tue immagini con testo -->
+        <div class="immagine-con-testo">
+            <img src="immagine1.jpg" alt="Immagine 1">
+            <p class="testo-emotion">Questa immagine per me mi succita<br> un'effetto di tranquillità, pace</p>
+            <h1>--------------------------------------------------------</h1>
+        </div>
+
+        <div class="immagine-con-testo">
+            <img src="immagine2.jpg" alt="Immagine 2">
+            <p class="testo-emotion">Questa immagine per me mi succita<br> un'effetto di libertà, felicità</p>
+            <h1>--------------------------------------------------------</h1>
+        </div>
+
+        <div class="immagine-con-testo">
+            <img src="immagine3.jpg" alt="Immagine 3">
+            <p class="testo-emotion">Questa immagine per me mi succita<br> un'effetto di tristezza, angoscia</p>
+        </div>
+    </div>
+
+    <script>
+        function mostraImmagini() {
+            var immagini = document.querySelector('.immagini');
+            immagini.style.display = 'block';
+            var button = document.querySelector('.button');
+            button.style.display = 'none';
+        }
+    </script>
+</body>
+</html>
